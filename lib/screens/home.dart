@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'screen2.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -17,11 +18,25 @@ class _HomeState extends State<Home> {
         leading: const Icon(Icons.arrow_back),
         title: const Text('Colory'),
         centerTitle: true,
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(right: 12),
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Screen2()),
+                );
+              },
+              icon: Icon(Icons.arrow_forward),
+            ),
+          ),
+        ],
       ),
       body: Container(
         color: Colors.white,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
