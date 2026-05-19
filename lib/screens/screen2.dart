@@ -53,11 +53,11 @@ class Screen2 extends StatelessWidget {
             ),
             SizedBox(height: 5),
             Text(
-              'by Thomas Maxwell Harrion',
+              'by Thomas Maxwell Harrison',
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 20,
-                letterSpacing: 0.025,
+                fontSize: 18,
+                letterSpacing: -1,
               ),
             ),
             SizedBox(height: 40),
@@ -151,11 +151,63 @@ class Screen2 extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(color: Colors.white),
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  padding: EdgeInsets.symmetric(horizontal: 15),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: 70),
+                      SizedBox(
+                        height: 70,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              height: 55,
+                              width: 130,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(10),
+                                  bottomLeft: Radius.circular(10),
+                                ),
+                                color: Color(0xff292637),
+                              ),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Icon(Icons.menu_book, color: Colors.white),
+                                  Text(
+                                    'Read Book',
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(width: 2),
+                            Container(
+                              height: 55,
+                              width: 130,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(10),
+                                  bottomRight: Radius.circular(10),
+                                ),
+                                color: Color(0xff292637),
+                              ),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Icon(Icons.headphones, color: Colors.white),
+                                  Text(
+                                    'HeadPhons',
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                       Text(
                         "What's it about?",
                         style: TextStyle(
@@ -176,7 +228,6 @@ class Screen2 extends StatelessWidget {
           ],
         ),
       ),
-      // bottomNavigationBar: Container(),
     );
   }
 }
